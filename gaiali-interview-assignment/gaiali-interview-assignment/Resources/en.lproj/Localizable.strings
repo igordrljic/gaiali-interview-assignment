@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  gaiali-interview-assignment
+
+  Created by Igor Drljic on 26.11.21..
+  
+*/
+
+// general
+"general.ok" = "ok";
+
+// errors
+
+// presentable errors
+"presentableError.title" = "Error";
+"presentableError.general" = "Something went south. Please try again.";
+"presentableError.serverCommunicationError" = "Server communication error. Please try again.";
