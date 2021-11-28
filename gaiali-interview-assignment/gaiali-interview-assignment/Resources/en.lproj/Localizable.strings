@@ -11,6 +11,10 @@
 
 // errors
 
+// forecast list
+"forecastList.title" = "Forecast";
+"forecastList.city.placeholder" = "Type city name";
+
 // presentable errors
 "presentableError.title" = "Error";
 "presentableError.general" = "Something went south. Please try again.";

@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A866B88F2753F53300043C9E /* ForecastListNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A866B88E2753F53300043C9E /* ForecastListNavigator.swift */; };
+		A866B891275411DC00043C9E /* BaseTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A866B890275411DC00043C9E /* BaseTableCell.swift */; };
+		A866B8932754206C00043C9E /* ForecastListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A866B8922754206C00043C9E /* ForecastListViewModel.swift */; };
+		A866B8952754208B00043C9E /* ForecastTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A866B8942754208B00043C9E /* ForecastTableDataSource.swift */; };
+		A866B897275420A300043C9E /* ForecastListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A866B896275420A300043C9E /* ForecastListViewController.swift */; };
+		A866B899275420DA00043C9E /* ForecastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A866B898275420DA00043C9E /* ForecastCell.swift */; };
+		A866B89B275420F200043C9E /* ForecastCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A866B89A275420F200043C9E /* ForecastCellViewModel.swift */; };
+		A866B89D2754210700043C9E /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = A866B89C2754210700043C9E /* Units.swift */; };
 		A89FE9892751062C00DE9D1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89FE9882751062C00DE9D1F /* AppDelegate.swift */; };
 		A89FE98B2751062C00DE9D1F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89FE98A2751062C00DE9D1F /* SceneDelegate.swift */; };
 		A89FE9922751062D00DE9D1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A89FE9912751062D00DE9D1F /* Assets.xcassets */; };
@@ -72,6 +80,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A866B88E2753F53300043C9E /* ForecastListNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastListNavigator.swift; sourceTree = "<group>"; };
+		A866B890275411DC00043C9E /* BaseTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableCell.swift; sourceTree = "<group>"; };
+		A866B8922754206C00043C9E /* ForecastListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastListViewModel.swift; sourceTree = "<group>"; };
+		A866B8942754208B00043C9E /* ForecastTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTableDataSource.swift; sourceTree = "<group>"; };
+		A866B896275420A300043C9E /* ForecastListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastListViewController.swift; sourceTree = "<group>"; };
+		A866B898275420DA00043C9E /* ForecastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastCell.swift; sourceTree = "<group>"; };
+		A866B89A275420F200043C9E /* ForecastCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastCellViewModel.swift; sourceTree = "<group>"; };
+		A866B89C2754210700043C9E /* Units.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Units.swift; sourceTree = "<group>"; };
 		A89FE9852751062C00DE9D1F /* gaiali-interview-assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gaiali-interview-assignment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A89FE9882751062C00DE9D1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A89FE98A2751062C00DE9D1F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -159,6 +175,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A866B88D2753F51300043C9E /* ForecastList */ = {
+			isa = PBXGroup;
+			children = (
+				A866B8922754206C00043C9E /* ForecastListViewModel.swift */,
+				A866B896275420A300043C9E /* ForecastListViewController.swift */,
+				A866B88E2753F53300043C9E /* ForecastListNavigator.swift */,
+				A866B8942754208B00043C9E /* ForecastTableDataSource.swift */,
+				A866B898275420DA00043C9E /* ForecastCell.swift */,
+				A866B89A275420F200043C9E /* ForecastCellViewModel.swift */,
+				A866B89C2754210700043C9E /* Units.swift */,
+			);
+			path = ForecastList;
+			sourceTree = "<group>";
+		};
 		A89FE97C2751062C00DE9D1F = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +232,7 @@
 		A89FE99F275106E100DE9D1F /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				A866B88D2753F51300043C9E /* ForecastList */,
 				A89FEA0927512D0600DE9D1F /* ForecastProvider */,
 				A89FE9D9275111E000DE9D1F /* Webservice */,
 				A89FEA19275137FE00DE9D1F /* Errors */,
@@ -242,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				A89FE9AD27510CDE00DE9D1F /* BaseViewController.swift */,
+				A866B890275411DC00043C9E /* BaseTableCell.swift */,
 			);
 			path = BaseViewClasses;
 			sourceTree = "<group>";
@@ -538,6 +570,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A866B88F2753F53300043C9E /* ForecastListNavigator.swift in Sources */,
 				A89FEA1D2751381B00DE9D1F /* PresentableError.swift in Sources */,
 				A89FE9BC2751102900DE9D1F /* Strings+Generated.swift in Sources */,
 				A89FE9EA275113D600DE9D1F /* WeatherWebservice.swift in Sources */,
@@ -549,6 +582,7 @@
 				A89FE9DB275111FA00DE9D1F /* Webservice.swift in Sources */,
 				A89FE9D32751116400DE9D1F /* JsonDecoding.swift in Sources */,
 				A89FEA16275136B400DE9D1F /* JSONDecoder+Extension.swift in Sources */,
+				A866B897275420A300043C9E /* ForecastListViewController.swift in Sources */,
 				A89FE9BD2751102900DE9D1F /* Assets+Generated.swift in Sources */,
 				A89FEA0027512C2A00DE9D1F /* Forecast.swift in Sources */,
 				A89FEA0227512C3B00DE9D1F /* Wind.swift in Sources */,
@@ -556,11 +590,14 @@
 				A89FEA182751374700DE9D1F /* FileError.swift in Sources */,
 				A89FE99E2751068100DE9D1F /* RootNavigator.swift in Sources */,
 				A89FE9AE27510CDE00DE9D1F /* BaseViewController.swift in Sources */,
+				A866B891275411DC00043C9E /* BaseTableCell.swift in Sources */,
 				A89FE9892751062C00DE9D1F /* AppDelegate.swift in Sources */,
 				A89FEA1B2751380700DE9D1F /* PresentableErrorConvertible.swift in Sources */,
 				A89FE9D22751116400DE9D1F /* NetworkError.swift in Sources */,
 				A89FEA0827512C7100DE9D1F /* ForecastMain.swift in Sources */,
+				A866B89D2754210700043C9E /* Units.swift in Sources */,
 				A89FE98B2751062C00DE9D1F /* SceneDelegate.swift in Sources */,
+				A866B8932754206C00043C9E /* ForecastListViewModel.swift in Sources */,
 				A89FE9E0275112CA00DE9D1F /* AppConfigError.swift in Sources */,
 				A89FE9D72751116400DE9D1F /* CharacterSet+Extensions.swift in Sources */,
 				A89FE9D42751116400DE9D1F /* ResponseDecoding.swift in Sources */,
@@ -569,14 +606,17 @@
 				A89FE9EC2751194300DE9D1F /* KeyedDecodingContainer+Extension.swift in Sources */,
 				A89FE9D02751116400DE9D1F /* HTTPMethod.swift in Sources */,
 				A89FEA0627512C6000DE9D1F /* Weather.swift in Sources */,
+				A866B8952754208B00043C9E /* ForecastTableDataSource.swift in Sources */,
 				A89FE9D62751116400DE9D1F /* ParameterEncoding.swift in Sources */,
 				A89FEA0B27512D1600DE9D1F /* ForecastProvider.swift in Sources */,
 				A89FEA142751369100DE9D1F /* ForecastJSONMockProvider.swift in Sources */,
+				A866B89B275420F200043C9E /* ForecastCellViewModel.swift in Sources */,
 				A89FE9D52751116400DE9D1F /* JSONEncoding.swift in Sources */,
 				A89FE9D82751116400DE9D1F /* URLEncoding.swift in Sources */,
 				A89FEA0427512C4C00DE9D1F /* Clouds.swift in Sources */,
 				A89FE9D12751116400DE9D1F /* Request.swift in Sources */,
 				A89FE9AB27510C7600DE9D1F /* UIView+Extension.swift in Sources */,
+				A866B899275420DA00043C9E /* ForecastCell.swift in Sources */,
 				A89FE9A2275108B200DE9D1F /* AppTheme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

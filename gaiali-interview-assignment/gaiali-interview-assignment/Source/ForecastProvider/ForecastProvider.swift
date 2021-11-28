@@ -9,6 +9,6 @@ import Foundation
 
 protocol ForecastProvider {
     func getForecast(for city: String,
-                     count: Int,
+                     units: Units,
                      completion: @escaping (Result<ForecastResponse, Error>) -> Void)
 }

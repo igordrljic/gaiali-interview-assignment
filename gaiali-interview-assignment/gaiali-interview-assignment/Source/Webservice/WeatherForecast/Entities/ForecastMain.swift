@@ -8,7 +8,7 @@
 import Foundation
 
 struct ForecastMain: Decodable {
-    let temp: Float
+    var temp: Float
     let feelsLike: Float
     let tempMin: Float
     let tempMax: Float

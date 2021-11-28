@@ -21,10 +21,10 @@ class WeatherWebservice: Webservice {
 
 extension WeatherWebservice {
     
-    func forecastRequest(for city: String, count: Int) -> Request {
+    func forecastRequest(for city: String, units: Units) -> Request {
         Request(url: self.baseUrl.appendingPathComponent("/forecast"),
                 httpMethod: .get,
-                parameters: ["q": city, "appid": AppConfig.shared.weatherApiKey, "cnt": count],
+                parameters: ["q": city, "appid": AppConfig.shared.weatherApiKey, "units": units.rawValue],
                 encoding: URLEncoding(),
                 decoding: self.decoding)
     }

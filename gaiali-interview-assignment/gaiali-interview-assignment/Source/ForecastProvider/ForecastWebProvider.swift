@@ -18,9 +18,9 @@ class ForecastWebProvider: ForecastProvider {
     }
     
     func getForecast(for city: String,
-                     count: Int,
+                     units: Units,
                      completion: @escaping (Result<ForecastResponse, Error>) -> Void) {
-        let request = webservice.forecastRequest(for: city, count: count)
+        let request = webservice.forecastRequest(for: city, units: units)
         network.run(request, completion: completion)
     }
 }

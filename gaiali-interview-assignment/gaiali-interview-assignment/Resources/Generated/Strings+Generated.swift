@@ -11,6 +11,15 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum Strings {
 
+  internal enum ForecastList {
+    /// Forecast
+    internal static let title = Strings.tr("Localizable", "forecastList.title")
+    internal enum City {
+      /// Type city name
+      internal static let placeholder = Strings.tr("Localizable", "forecastList.city.placeholder")
+    }
+  }
+
   internal enum General {
     /// ok
     internal static let ok = Strings.tr("Localizable", "general.ok")
