@@ -18,7 +18,7 @@ class ForecastJSONMockProvider: ForecastProvider {
     func getForecast(for city: String,
                      units: Units,
                      completion: @escaping (Result<[Forecast], Error>) -> Void) {
-        completion(readJSON(file: city))
+        completion(readJSON(file: "\(city)-\(units.rawValue)"))
     }
     
     private func readJSON(file fileName: String) -> Result<[Forecast], Error> {

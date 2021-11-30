@@ -56,7 +56,7 @@
 		A89FEA0627512C6000DE9D1F /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89FEA0527512C6000DE9D1F /* Weather.swift */; };
 		A89FEA0827512C7100DE9D1F /* ForecastMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89FEA0727512C7100DE9D1F /* ForecastMain.swift */; };
 		A89FEA0B27512D1600DE9D1F /* ForecastProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89FEA0A27512D1600DE9D1F /* ForecastProvider.swift */; };
-		A89FEA0E275134B600DE9D1F /* Belgrade.json in Resources */ = {isa = PBXBuildFile; fileRef = A89FEA0D275134B600DE9D1F /* Belgrade.json */; };
+		A89FEA0E275134B600DE9D1F /* Belgrade-metric.json in Resources */ = {isa = PBXBuildFile; fileRef = A89FEA0D275134B600DE9D1F /* Belgrade-metric.json */; };
 		A89FEA102751350800DE9D1F /* ForecastJSONMockProviderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89FEA0F2751350800DE9D1F /* ForecastJSONMockProviderTest.swift */; };
 		A89FEA122751367B00DE9D1F /* ForecastWebProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89FEA112751367B00DE9D1F /* ForecastWebProvider.swift */; };
 		A89FEA142751369100DE9D1F /* ForecastJSONMockProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89FEA132751369100DE9D1F /* ForecastJSONMockProvider.swift */; };
@@ -142,7 +142,7 @@
 		A89FEA0527512C6000DE9D1F /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		A89FEA0727512C7100DE9D1F /* ForecastMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastMain.swift; sourceTree = "<group>"; };
 		A89FEA0A27512D1600DE9D1F /* ForecastProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastProvider.swift; sourceTree = "<group>"; };
-		A89FEA0D275134B600DE9D1F /* Belgrade.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Belgrade.json; sourceTree = "<group>"; };
+		A89FEA0D275134B600DE9D1F /* Belgrade-metric.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Belgrade-metric.json"; sourceTree = "<group>"; };
 		A89FEA0F2751350800DE9D1F /* ForecastJSONMockProviderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastJSONMockProviderTest.swift; sourceTree = "<group>"; };
 		A89FEA112751367B00DE9D1F /* ForecastWebProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastWebProvider.swift; sourceTree = "<group>"; };
 		A89FEA132751369100DE9D1F /* ForecastJSONMockProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastJSONMockProvider.swift; sourceTree = "<group>"; };
@@ -435,7 +435,7 @@
 		A89FEA0C2751343F00DE9D1F /* Mock */ = {
 			isa = PBXGroup;
 			children = (
-				A89FEA0D275134B600DE9D1F /* Belgrade.json */,
+				A89FEA0D275134B600DE9D1F /* Belgrade-metric.json */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -575,7 +575,7 @@
 				A89FE9B727510FCC00DE9D1F /* Localizable.strings in Resources */,
 				A89FE9952751062D00DE9D1F /* LaunchScreen.storyboard in Resources */,
 				A89FE9E82751137F00DE9D1F /* AppConfig-release.plist in Resources */,
-				A89FEA0E275134B600DE9D1F /* Belgrade.json in Resources */,
+				A89FEA0E275134B600DE9D1F /* Belgrade-metric.json in Resources */,
 				A89FE9E62751136700DE9D1F /* AppConfig-debug.plist in Resources */,
 				A89FE9922751062D00DE9D1F /* Assets.xcassets in Resources */,
 				A89FE9B427510F2200DE9D1F /* Podfile in Resources */,
