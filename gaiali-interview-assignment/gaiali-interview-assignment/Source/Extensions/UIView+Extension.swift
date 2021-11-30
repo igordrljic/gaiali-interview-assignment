@@ -13,4 +13,15 @@ extension UIView {
         translatesAutoresizingMaskIntoConstraints = false
         return self
     }
+    
+    func setApectRatioConstraint(_ ratio: CGFloat) {
+        let constraint = NSLayoutConstraint(item: self,
+                                            attribute: .height,
+                                            relatedBy: .equal,
+                                            toItem: self,
+                                            attribute: .width,
+                                            multiplier: ratio,
+                                            constant: 0)
+        addConstraint(constraint)
+    }
 }

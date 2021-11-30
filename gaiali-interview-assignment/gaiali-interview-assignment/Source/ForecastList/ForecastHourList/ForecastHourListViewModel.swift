@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class ForecastHourListViewModel {
     let forecastCollectionDataSource = ForecastHourCollectionDataSource()
@@ -38,7 +39,8 @@ class ForecastHourListViewModel {
         forecastCollectionDataSource.cellViewModels = forecasts.map({ hourForecast in
             ForecastCollectionCellModel(temperature: "\(Int(hourForecast.main.temp.rounded()))\(units.tempUnit)",
                                         time: dateFormatter.string(from: hourForecast.dt),
-                                        icon: hourForecast.weather.first?.icon)
+                                        iconPlaceholder: UIImage(systemName: "photo")!,
+                                        icon: hourForecast.weather.first?.iconUrl)
         })
     }
 }

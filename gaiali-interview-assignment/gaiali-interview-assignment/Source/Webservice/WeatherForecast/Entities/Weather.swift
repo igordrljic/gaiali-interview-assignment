@@ -15,3 +15,19 @@ struct Weather: Decodable {
     let description: String
     let icon: String
 }
+
+import UIKit
+
+extension UIScreen {
+    var scaleIdentifier: String {
+        "@\(scale)X"
+    }
+}
+
+extension Weather {
+    var iconUrl: URL? {
+        let imageRepoUrl = AppConfig.shared.imageRepositoryURL
+        let imageCode = "\(icon)\(UIScreen.main.scaleIdentifier).png"
+        return imageRepoUrl.appendingPathComponent(imageCode)
+    }
+}

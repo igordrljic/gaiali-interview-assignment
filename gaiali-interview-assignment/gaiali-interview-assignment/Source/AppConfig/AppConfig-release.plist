@@ -6,5 +6,7 @@
 	<string>https://api.openweathermap.org/data/2.5</string>
 	<key>WeatherApiKey</key>
 	<string>48e934a18e04fbbd4872050cb7c38eea</string>
+	<key>ImageRepositoryURL</key>
+	<string>http://openweathermap.org/img/wn</string>
 </dict>
 </plist>

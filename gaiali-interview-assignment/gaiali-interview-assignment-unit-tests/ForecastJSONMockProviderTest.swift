@@ -18,13 +18,13 @@ class ForecastJSONMockProviderTest: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testAppConfigRead() throws {
+    func testJSONMockProvierFetch() throws {
         let expectation = expectation(description: "Fetching forecast")
         let provider = ForecastJSONMockProvider()
-        provider.getForecast(for: "Belgrade", count: 1) { result in
+        provider.getForecast(for: "Belgrade", units: .metric) { result in
             switch result {
             case let .success(forecast):
-                XCTAssertEqual(forecast.list.count, 1)
+                XCTAssertEqual(forecast.count, 40)
             case let .failure(error):
                 XCTFail(String(describing: error))
             }

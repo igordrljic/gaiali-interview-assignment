@@ -12,10 +12,12 @@ class AppConfig: Decodable {
     static let environment = Environment.read()
     
     let weatherForecastBaseURL: URL
+    let imageRepositoryURL: URL
     let weatherApiKey: String
     
     private enum CodingKeys: String, CodingKey {
         case weatherForecastBaseURL = "WeatherForecastBaseURL"
+        case imageRepositoryURL = "ImageRepositoryURL"
         case weatherApiKey = "WeatherApiKey"
     }
     

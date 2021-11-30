@@ -73,6 +73,7 @@
 		A8BF2CA42756520400BA81E7 /* ForecastHourCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BF2CA32756520400BA81E7 /* ForecastHourCollectionDataSource.swift */; };
 		A8BF2CA72756705100BA81E7 /* IntrinsicSizeCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BF2CA62756705100BA81E7 /* IntrinsicSizeCollectionView.swift */; };
 		A8BF2CA92756708B00BA81E7 /* BaseCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BF2CA82756708B00BA81E7 /* BaseCollectionView.swift */; };
+		A8BF2CAB275672E900BA81E7 /* ForecastCollectionCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BF2CAA275672E900BA81E7 /* ForecastCollectionCellModel.swift */; };
 		AB0B11E3D055AEE56F73C0F0 /* Pods_gaiali_interview_assignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E96BC9F88340182B7E2507D6 /* Pods_gaiali_interview_assignment.framework */; };
 /* End PBXBuildFile section */
 
@@ -157,6 +158,7 @@
 		A8BF2CA32756520400BA81E7 /* ForecastHourCollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastHourCollectionDataSource.swift; sourceTree = "<group>"; };
 		A8BF2CA62756705100BA81E7 /* IntrinsicSizeCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntrinsicSizeCollectionView.swift; sourceTree = "<group>"; };
 		A8BF2CA82756708B00BA81E7 /* BaseCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionView.swift; sourceTree = "<group>"; };
+		A8BF2CAA275672E900BA81E7 /* ForecastCollectionCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastCollectionCellModel.swift; sourceTree = "<group>"; };
 		E5B00DEA8E0F9011C0882DF6 /* Pods-gaiali-interview-assignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gaiali-interview-assignment.debug.xcconfig"; path = "Target Support Files/Pods-gaiali-interview-assignment/Pods-gaiali-interview-assignment.debug.xcconfig"; sourceTree = "<group>"; };
 		E77DEF5BE4D1CF6CF6174D65 /* Pods-gaiali-interview-assignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gaiali-interview-assignment.release.xcconfig"; path = "Target Support Files/Pods-gaiali-interview-assignment/Pods-gaiali-interview-assignment.release.xcconfig"; sourceTree = "<group>"; };
 		E96BC9F88340182B7E2507D6 /* Pods_gaiali_interview_assignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gaiali_interview_assignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -460,6 +462,7 @@
 			children = (
 				A866B898275420DA00043C9E /* ForecastTableCell.swift */,
 				A8BF2C9F275651B000BA81E7 /* ForecastCollectionCell.swift */,
+				A8BF2CAA275672E900BA81E7 /* ForecastCollectionCellModel.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -663,6 +666,7 @@
 				A89FE9D62751116400DE9D1F /* ParameterEncoding.swift in Sources */,
 				A89FEA0B27512D1600DE9D1F /* ForecastProvider.swift in Sources */,
 				A89FEA142751369100DE9D1F /* ForecastJSONMockProvider.swift in Sources */,
+				A8BF2CAB275672E900BA81E7 /* ForecastCollectionCellModel.swift in Sources */,
 				A89FE9D52751116400DE9D1F /* JSONEncoding.swift in Sources */,
 				A89FE9D82751116400DE9D1F /* URLEncoding.swift in Sources */,
 				A89FEA0427512C4C00DE9D1F /* Clouds.swift in Sources */,

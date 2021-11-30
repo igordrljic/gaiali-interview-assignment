@@ -12,7 +12,7 @@
 // errors
 
 // forecast list
-"forecastList.title" = "Forecast";
+"forecastList.title" = "Weather Forecast";
 "forecastList.city.placeholder" = "Type city name";
 
 // presentable errors

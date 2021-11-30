@@ -7,16 +7,11 @@
 
 import UIKit
 
-struct ForecastCollectionCellModel {
-    let temperature: String
-    let time: String
-    let icon: String?
-}
-
 class ForecastCollectionCell: BaseCollectionCell {
     let temp = UILabel().autolayoutView
     let time = UILabel().autolayoutView
-    private let padding: CGFloat = 10
+    let iconView = UIImageView().autolayoutView
+    private let padding: CGFloat = 20
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -31,23 +26,28 @@ class ForecastCollectionCell: BaseCollectionCell {
     func configure(with viewModel: ForecastCollectionCellModel) {
         time.text = viewModel.time
         temp.text = viewModel.temperature
+        iconView.image = viewModel.iconPlaceholder
     }
     
-    func setViews() {        
+    func setViews() {
+        iconView.contentMode = .scaleAspectFit
+        contentView.addSubview(iconView)
         contentView.addSubview(temp)
         contentView.addSubview(time)
     }
     
     func setConstraints() {
-        [time.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding),
+        [iconView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding),
+         iconView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: padding),
+         iconView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -padding),
+         iconView.trailingAnchor.constraint(lessThanOrEqualTo: time.leadingAnchor, constant: -padding),
+         iconView.trailingAnchor.constraint(lessThanOrEqualTo: temp.leadingAnchor, constant: -padding),
          time.topAnchor.constraint(equalTo: contentView.topAnchor, constant: padding),
-         time.trailingAnchor.constraint(equalTo: temp.leadingAnchor, constant: -padding),
-         time.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -padding),
-         temp.topAnchor.constraint(equalTo: contentView.topAnchor, constant: padding),
+         time.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding),
+         time.bottomAnchor.constraint(equalTo: temp.topAnchor, constant: -padding),
          temp.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding),
-         temp.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -padding)]
+         temp.bottomAnchor.constraint(lessThanOrEqualTo: contentView.bottomAnchor, constant: -padding)]
             .forEach { $0.isActive = true }
-        temp.setContentHuggingPriority(.defaultHigh, for: .horizontal)
-        time.setContentHuggingPriority(.defaultLow, for: .horizontal)
+        iconView.setApectRatioConstraint(1)
     }
 }
