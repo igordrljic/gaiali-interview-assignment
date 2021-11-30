@@ -1,5 +1,5 @@
 //
-//  ForecastListViewController.swift
+//  ForecastDaysListViewController.swift
 //  gaiali-interview-assignment
 //
 //  Created by Igor Drljic on 28.11.21..
@@ -7,8 +7,8 @@
 
 import UIKit
 
-class ForecastListViewController: BaseViewController {
-    var viewModel: ForecastListViewModel!
+class ForecastDaysListViewController: BaseViewController {
+    var viewModel: ForecastDaysListViewModel!
     let textField = UITextField().autolayoutView
     let tableView = UITableView().autolayoutView
     
@@ -36,7 +36,7 @@ class ForecastListViewController: BaseViewController {
         view.addSubview(textField)
         
         tableView.register(ForecastTableCell.self, forCellReuseIdentifier: ForecastTableCell.reuseIdentifier)
-        tableView.dataSource = viewModel.tableDataSource
+        tableView.dataSource = viewModel.forecastTableDataSource
         view.addSubview(tableView)
     }
     
@@ -54,12 +54,15 @@ class ForecastListViewController: BaseViewController {
     }
 }
 
-extension ForecastListViewController: UITextFieldDelegate {
+extension ForecastDaysListViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         if let city = textField.text, !city.isEmpty {
             self.showActivityIndicator()
-            self.viewModel.load(for: city) { _ in
+            self.viewModel.load(for: city) { result in
                 self.hideActivityIndicator()
+                if case let .failure(error) = result {
+                    self.presentAlert(for: error)
+                }
                 self.tableView.reloadData()
             }
         } else {

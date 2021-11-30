@@ -1,5 +1,5 @@
 //
-//  ForecastHourCollectionDataSource.swift
+//  HourForecastCollectionDataSource.swift
 //  gaiali-interview-assignment
 //
 //  Created by Igor Drljic on 30.11.21..

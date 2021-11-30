@@ -1,5 +1,5 @@
 //
-//  ForecastTableDataSource.swift
+//  DaysForecastTableDataSource.swift
 //  gaiali-interview-assignment
 //
 //  Created by Igor Drljic on 28.11.21..
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ForecastTableDataSource: NSObject, UITableViewDataSource {
+class ForecastDaysTableDataSource: NSObject, UITableViewDataSource {
     var sectionTitles = [String]()
     var cellViewModels = [ForecastHourListViewModel]()
     

@@ -1,5 +1,5 @@
 //
-//  ForecastListViewModel.swift
+//  ForecastDaysListViewModel.swift
 //  gaiali-interview-assignment
 //
 //  Created by Igor Drljic on 28.11.21..
@@ -7,29 +7,25 @@
 
 import UIKit
 
-class ForecastListViewModel {
-    private let forecastTableDataSource = ForecastTableDataSource()
+class ForecastDaysListViewModel {
+    let forecastTableDataSource = ForecastDaysTableDataSource()
     private let forecastProvider: ForecastProvider
     private let units: Units
     
-    var tableDataSource: UITableViewDataSource {
-        forecastTableDataSource
-    }
-    
-    init(forecastProvider: ForecastProvider, units: Units = .metric) {
+    init(forecastProvider: ForecastProvider, units: Units) {
         self.forecastProvider = forecastProvider
         self.units = units
     }
     
-    func load(for city: String, completion: @escaping (Error?) -> Void) {
+    func load(for city: String, completion: @escaping (Result<Void, Error>) -> Void) {
         forecastProvider.getForecast(for: city, units: units) { result in
             switch result {
             case let .success(forecast):
                 self.update(with: forecast, for: city)
-                completion(nil)
+                completion(.success(()))
             case let .failure(error):
                 self.clear()
-                completion(error)
+                completion(.failure(error.toPresentableError()))
             }
         }
     }

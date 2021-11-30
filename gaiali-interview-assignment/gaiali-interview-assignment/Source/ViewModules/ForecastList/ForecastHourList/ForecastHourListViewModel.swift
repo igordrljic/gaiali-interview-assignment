@@ -28,7 +28,7 @@ class ForecastHourListViewModel {
                 completion(.success(()))
             case let .failure(error):
                 self.fillCellViewModels(with: [])
-                completion(.failure(error))
+                completion(.failure(error.toPresentableError()))
             }
         }
     }

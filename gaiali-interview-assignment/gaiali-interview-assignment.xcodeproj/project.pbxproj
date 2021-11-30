@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		A866B88F2753F53300043C9E /* ForecastListNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A866B88E2753F53300043C9E /* ForecastListNavigator.swift */; };
 		A866B891275411DC00043C9E /* BaseTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A866B890275411DC00043C9E /* BaseTableCell.swift */; };
-		A866B8932754206C00043C9E /* ForecastListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A866B8922754206C00043C9E /* ForecastListViewModel.swift */; };
-		A866B8952754208B00043C9E /* ForecastTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A866B8942754208B00043C9E /* ForecastTableDataSource.swift */; };
-		A866B897275420A300043C9E /* ForecastListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A866B896275420A300043C9E /* ForecastListViewController.swift */; };
+		A866B8932754206C00043C9E /* ForecastDaysListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A866B8922754206C00043C9E /* ForecastDaysListViewModel.swift */; };
+		A866B8952754208B00043C9E /* ForecastDaysTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A866B8942754208B00043C9E /* ForecastDaysTableDataSource.swift */; };
+		A866B897275420A300043C9E /* ForecastDaysListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A866B896275420A300043C9E /* ForecastDaysListViewController.swift */; };
 		A866B899275420DA00043C9E /* ForecastTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A866B898275420DA00043C9E /* ForecastTableCell.swift */; };
 		A866B89D2754210700043C9E /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = A866B89C2754210700043C9E /* Units.swift */; };
 		A89FE9892751062C00DE9D1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89FE9882751062C00DE9D1F /* AppDelegate.swift */; };
@@ -75,6 +75,7 @@
 		A8BF2CA92756708B00BA81E7 /* BaseCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BF2CA82756708B00BA81E7 /* BaseCollectionView.swift */; };
 		A8BF2CAB275672E900BA81E7 /* ForecastCollectionCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BF2CAA275672E900BA81E7 /* ForecastCollectionCellModel.swift */; };
 		A8BF2CAD27567A0E00BA81E7 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BF2CAC27567A0E00BA81E7 /* UIImageView+Extension.swift */; };
+		A8BF2CB12756922900BA81E7 /* ForecastDaysListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BF2CB02756922900BA81E7 /* ForecastDaysListViewModelTest.swift */; };
 		AB0B11E3D055AEE56F73C0F0 /* Pods_gaiali_interview_assignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E96BC9F88340182B7E2507D6 /* Pods_gaiali_interview_assignment.framework */; };
 /* End PBXBuildFile section */
 
@@ -91,9 +92,9 @@
 /* Begin PBXFileReference section */
 		A866B88E2753F53300043C9E /* ForecastListNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastListNavigator.swift; sourceTree = "<group>"; };
 		A866B890275411DC00043C9E /* BaseTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableCell.swift; sourceTree = "<group>"; };
-		A866B8922754206C00043C9E /* ForecastListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastListViewModel.swift; sourceTree = "<group>"; };
-		A866B8942754208B00043C9E /* ForecastTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTableDataSource.swift; sourceTree = "<group>"; };
-		A866B896275420A300043C9E /* ForecastListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastListViewController.swift; sourceTree = "<group>"; };
+		A866B8922754206C00043C9E /* ForecastDaysListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDaysListViewModel.swift; sourceTree = "<group>"; };
+		A866B8942754208B00043C9E /* ForecastDaysTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDaysTableDataSource.swift; sourceTree = "<group>"; };
+		A866B896275420A300043C9E /* ForecastDaysListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDaysListViewController.swift; sourceTree = "<group>"; };
 		A866B898275420DA00043C9E /* ForecastTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTableCell.swift; sourceTree = "<group>"; };
 		A866B89C2754210700043C9E /* Units.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Units.swift; sourceTree = "<group>"; };
 		A89FE9852751062C00DE9D1F /* gaiali-interview-assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gaiali-interview-assignment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -161,6 +162,7 @@
 		A8BF2CA82756708B00BA81E7 /* BaseCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionView.swift; sourceTree = "<group>"; };
 		A8BF2CAA275672E900BA81E7 /* ForecastCollectionCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastCollectionCellModel.swift; sourceTree = "<group>"; };
 		A8BF2CAC27567A0E00BA81E7 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		A8BF2CB02756922900BA81E7 /* ForecastDaysListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDaysListViewModelTest.swift; sourceTree = "<group>"; };
 		E5B00DEA8E0F9011C0882DF6 /* Pods-gaiali-interview-assignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gaiali-interview-assignment.debug.xcconfig"; path = "Target Support Files/Pods-gaiali-interview-assignment/Pods-gaiali-interview-assignment.debug.xcconfig"; sourceTree = "<group>"; };
 		E77DEF5BE4D1CF6CF6174D65 /* Pods-gaiali-interview-assignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gaiali-interview-assignment.release.xcconfig"; path = "Target Support Files/Pods-gaiali-interview-assignment/Pods-gaiali-interview-assignment.release.xcconfig"; sourceTree = "<group>"; };
 		E96BC9F88340182B7E2507D6 /* Pods_gaiali_interview_assignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gaiali_interview_assignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -196,9 +198,9 @@
 		A866B88D2753F51300043C9E /* ForecastList */ = {
 			isa = PBXGroup;
 			children = (
-				A8BF2C9E275651A900BA81E7 /* Cells */,
-				A8BF2C972755772C00BA81E7 /* ForecastHourList */,
 				A8BF2CA52756539000BA81E7 /* ForecastDaysList */,
+				A8BF2C972755772C00BA81E7 /* ForecastHourList */,
+				A8BF2C9E275651A900BA81E7 /* Cells */,
 				A866B89C2754210700043C9E /* Units.swift */,
 			);
 			path = ForecastList;
@@ -247,8 +249,8 @@
 		A89FE99F275106E100DE9D1F /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				A866B88D2753F51300043C9E /* ForecastList */,
-				A89FEA0927512D0600DE9D1F /* ForecastProvider */,
+				A8BF2CAE275681BD00BA81E7 /* ViewModules */,
+				A8BF2CAF275681D400BA81E7 /* DataProviders */,
 				A89FE9D9275111E000DE9D1F /* Webservice */,
 				A89FEA19275137FE00DE9D1F /* Errors */,
 				A89FE9A927510C6100DE9D1F /* Extensions */,
@@ -400,8 +402,9 @@
 		A89FE9F227511A8600DE9D1F /* gaiali-interview-assignment-unit-tests */ = {
 			isa = PBXGroup;
 			children = (
-				A89FE9F327511A8600DE9D1F /* AppConfigTest.swift */,
+				A8BF2CB02756922900BA81E7 /* ForecastDaysListViewModelTest.swift */,
 				A89FEA0F2751350800DE9D1F /* ForecastJSONMockProviderTest.swift */,
+				A89FE9F327511A8600DE9D1F /* AppConfigTest.swift */,
 				A89FEA1E27513A0300DE9D1F /* XCTestCase+Extension.swift */,
 				A89FE9F527511A8600DE9D1F /* Info.plist */,
 			);
@@ -473,12 +476,28 @@
 		A8BF2CA52756539000BA81E7 /* ForecastDaysList */ = {
 			isa = PBXGroup;
 			children = (
-				A866B8922754206C00043C9E /* ForecastListViewModel.swift */,
-				A866B896275420A300043C9E /* ForecastListViewController.swift */,
+				A866B8922754206C00043C9E /* ForecastDaysListViewModel.swift */,
+				A866B896275420A300043C9E /* ForecastDaysListViewController.swift */,
 				A866B88E2753F53300043C9E /* ForecastListNavigator.swift */,
-				A866B8942754208B00043C9E /* ForecastTableDataSource.swift */,
+				A866B8942754208B00043C9E /* ForecastDaysTableDataSource.swift */,
 			);
 			path = ForecastDaysList;
+			sourceTree = "<group>";
+		};
+		A8BF2CAE275681BD00BA81E7 /* ViewModules */ = {
+			isa = PBXGroup;
+			children = (
+				A866B88D2753F51300043C9E /* ForecastList */,
+			);
+			path = ViewModules;
+			sourceTree = "<group>";
+		};
+		A8BF2CAF275681D400BA81E7 /* DataProviders */ = {
+			isa = PBXGroup;
+			children = (
+				A89FEA0927512D0600DE9D1F /* ForecastProvider */,
+			);
+			path = DataProviders;
 			sourceTree = "<group>";
 		};
 		F489A784ECB2E134A9ED740D /* Pods */ = {
@@ -655,7 +674,7 @@
 				A89FE9D32751116400DE9D1F /* JsonDecoding.swift in Sources */,
 				A89FEA16275136B400DE9D1F /* JSONDecoder+Extension.swift in Sources */,
 				A8BF2CA42756520400BA81E7 /* ForecastHourCollectionDataSource.swift in Sources */,
-				A866B897275420A300043C9E /* ForecastListViewController.swift in Sources */,
+				A866B897275420A300043C9E /* ForecastDaysListViewController.swift in Sources */,
 				A89FE9BD2751102900DE9D1F /* Assets+Generated.swift in Sources */,
 				A89FEA0027512C2A00DE9D1F /* Forecast.swift in Sources */,
 				A8BF2C992755779B00BA81E7 /* ForecastHourListViewController.swift in Sources */,
@@ -673,7 +692,7 @@
 				A866B89D2754210700043C9E /* Units.swift in Sources */,
 				A8BF2C9D27557ADE00BA81E7 /* BaseCollectionCell.swift in Sources */,
 				A89FE98B2751062C00DE9D1F /* SceneDelegate.swift in Sources */,
-				A866B8932754206C00043C9E /* ForecastListViewModel.swift in Sources */,
+				A866B8932754206C00043C9E /* ForecastDaysListViewModel.swift in Sources */,
 				A89FE9E0275112CA00DE9D1F /* AppConfigError.swift in Sources */,
 				A89FE9D72751116400DE9D1F /* CharacterSet+Extensions.swift in Sources */,
 				A89FE9D42751116400DE9D1F /* ResponseDecoding.swift in Sources */,
@@ -683,7 +702,7 @@
 				A89FE9EC2751194300DE9D1F /* KeyedDecodingContainer+Extension.swift in Sources */,
 				A89FE9D02751116400DE9D1F /* HTTPMethod.swift in Sources */,
 				A89FEA0627512C6000DE9D1F /* Weather.swift in Sources */,
-				A866B8952754208B00043C9E /* ForecastTableDataSource.swift in Sources */,
+				A866B8952754208B00043C9E /* ForecastDaysTableDataSource.swift in Sources */,
 				A89FE9D62751116400DE9D1F /* ParameterEncoding.swift in Sources */,
 				A89FEA0B27512D1600DE9D1F /* ForecastProvider.swift in Sources */,
 				A89FEA142751369100DE9D1F /* ForecastJSONMockProvider.swift in Sources */,
@@ -705,6 +724,7 @@
 			files = (
 				A89FEA1F27513A0300DE9D1F /* XCTestCase+Extension.swift in Sources */,
 				A89FE9F427511A8600DE9D1F /* AppConfigTest.swift in Sources */,
+				A8BF2CB12756922900BA81E7 /* ForecastDaysListViewModelTest.swift in Sources */,
 				A89FEA102751350800DE9D1F /* ForecastJSONMockProviderTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,6 +14,19 @@ enum Units: String {
 }
 
 extension Units {
+    private static let defaultUnitsKey = "defaultUnitsKey"
+    
+    static var defaultValue: Units {
+        get {
+            guard let value = UserDefaults.standard.string(forKey: Units.defaultUnitsKey)
+            else { return .metric }
+            return Units(rawValue: value)!
+        }
+        set {
+            UserDefaults.standard.setValue(newValue, forKey: Units.defaultUnitsKey)
+        }
+    }
+    
     var tempUnit: String {
         switch self {
         case .standard:

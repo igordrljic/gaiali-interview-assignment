@@ -17,3 +17,13 @@ enum PresentableError: LocalizedError {
         }
     }
 }
+
+extension Error {
+    func toPresentableError() -> PresentableError {
+        if let error = self as? PresentableError {
+            return error
+        } else {
+            return PresentableError.general
+        }
+    }
+}
