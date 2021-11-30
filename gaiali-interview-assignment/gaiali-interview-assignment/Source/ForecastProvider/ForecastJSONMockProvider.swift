@@ -17,17 +17,17 @@ class ForecastJSONMockProvider: ForecastProvider {
     
     func getForecast(for city: String,
                      units: Units,
-                     completion: @escaping (Result<ForecastResponse, Error>) -> Void) {
+                     completion: @escaping (Result<[Forecast], Error>) -> Void) {
         completion(readJSON(file: city))
     }
     
-    private func readJSON(file fileName: String) -> Result<ForecastResponse, Error> {
+    private func readJSON(file fileName: String) -> Result<[Forecast], Error> {
         do {
             guard let fileUrl = Bundle(for: ForecastJSONMockProvider.self).url(forResource: fileName, withExtension: "json")
             else { throw FileError.fileNotFoundFor(fileName: fileName) }
             let data = try Data(contentsOf: fileUrl)
             let forecast = try jsonDecoder.decode(ForecastResponse.self, from: data)
-            return .success(forecast)
+            return .success(forecast.list)
         } catch {
             return .failure(error)
         }

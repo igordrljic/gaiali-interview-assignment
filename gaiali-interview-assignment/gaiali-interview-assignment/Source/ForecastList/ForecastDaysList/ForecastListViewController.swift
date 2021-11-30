@@ -35,7 +35,7 @@ class ForecastListViewController: BaseViewController {
         textField.delegate = self
         view.addSubview(textField)
         
-        tableView.register(ForecastCell.self, forCellReuseIdentifier: ForecastCell.reuseIdentifier)
+        tableView.register(ForecastTableCell.self, forCellReuseIdentifier: ForecastTableCell.reuseIdentifier)
         tableView.dataSource = viewModel.tableDataSource
         view.addSubview(tableView)
     }

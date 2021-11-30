@@ -10,5 +10,5 @@ import Foundation
 protocol ForecastProvider {
     func getForecast(for city: String,
                      units: Units,
-                     completion: @escaping (Result<ForecastResponse, Error>) -> Void)
+                     completion: @escaping (Result<[Forecast], Error>) -> Void)
 }

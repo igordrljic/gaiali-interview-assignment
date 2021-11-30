@@ -9,14 +9,14 @@ import UIKit
 
 class ForecastTableDataSource: NSObject, UITableViewDataSource {
     var sectionTitles = [String]()
-    var cellViewModels = [[ForecastCellViewModel]]()
+    var cellViewModels = [ForecastHourListViewModel]()
     
     func numberOfSections(in tableView: UITableView) -> Int {
         cellViewModels.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        cellViewModels[section].count
+        1
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -24,9 +24,9 @@ class ForecastTableDataSource: NSObject, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: ForecastCell.reuseIdentifier) as? ForecastCell
-        else { fatalError("Can't dequeue cell with reuse identifier: \(ForecastCell.reuseIdentifier)") }
-        cell.configure(with: cellViewModels[indexPath.section][indexPath.row])
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ForecastTableCell.reuseIdentifier) as? ForecastTableCell
+        else { fatalError("Can't dequeue cell with reuse identifier: \(ForecastTableCell.reuseIdentifier)") }
+        cell.configure(with: cellViewModels[indexPath.section])
         return cell
     }
 }

@@ -25,7 +25,7 @@ class ForecastListViewModel {
         forecastProvider.getForecast(for: city, units: units) { result in
             switch result {
             case let .success(forecast):
-                self.update(with: forecast)
+                self.update(with: forecast, for: city)
                 completion(nil)
             case let .failure(error):
                 self.clear()
@@ -39,12 +39,10 @@ class ForecastListViewModel {
         forecastTableDataSource.cellViewModels = []
     }
     
-    private func update(with forecast: ForecastResponse) {
-        let forecastByDay = divideByDay(forecast.list)
+    private func update(with forecast: [Forecast], for city: String) {
+        let forecastByDay = divideByDay(forecast)
         fillSectionTitles(with: forecastByDay)
-        fillCellViewModels(with: forecastByDay)
-        debugPrint(forecastTableDataSource.sectionTitles)
-        debugPrint(forecastTableDataSource.cellViewModels)
+        fillCellViewModels(with: forecastByDay, for: city)
     }
     
     private func fillSectionTitles(with forecasts: [[Forecast]]) {
@@ -55,15 +53,11 @@ class ForecastListViewModel {
         })
     }
     
-    private func fillCellViewModels(with forecasts: [[Forecast]]) {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "HH:mm"
+    private func fillCellViewModels(with forecasts: [[Forecast]], for city: String) {
         forecastTableDataSource.cellViewModels = forecasts.map({ forecastsForDay in
-            forecastsForDay.map({ forecastsForTime in
-                ForecastCellViewModel(temperature: "\(Int(forecastsForTime.main.temp.rounded()))\(units.tempUnit)",
-                                      time: dateFormatter.string(from: forecastsForTime.dt),
-                                      icon: forecastsForTime.weather.first?.icon)
-            })
+            let forecast = [ForecastLocalProvider.keyFor(city: city, units: units): forecastsForDay]
+            let forecastProvider = ForecastLocalProvider(forecast: forecast)
+            return ForecastHourListViewModel(forecastProvider: forecastProvider, city: city, units: units)
         })
     }
     

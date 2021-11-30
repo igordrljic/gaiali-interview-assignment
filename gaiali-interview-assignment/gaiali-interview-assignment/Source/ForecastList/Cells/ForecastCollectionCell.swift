@@ -1,19 +1,25 @@
 //
-//  ForecastCell.swift
+//  ForecastCollectionCell.swift
 //  gaiali-interview-assignment
 //
-//  Created by Igor Drljic on 28.11.21..
+//  Created by Igor Drljic on 30.11.21..
 //
 
 import UIKit
 
-class ForecastCell: BaseTableCell {
+struct ForecastCollectionCellModel {
+    let temperature: String
+    let time: String
+    let icon: String?
+}
+
+class ForecastCollectionCell: BaseCollectionCell {
     let temp = UILabel().autolayoutView
     let time = UILabel().autolayoutView
     private let padding: CGFloat = 10
     
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         setViews()
         setConstraints()
     }
@@ -22,12 +28,12 @@ class ForecastCell: BaseTableCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(with viewModel: ForecastCellViewModel) {
+    func configure(with viewModel: ForecastCollectionCellModel) {
         time.text = viewModel.time
         temp.text = viewModel.temperature
     }
     
-    func setViews() {
+    func setViews() {        
         contentView.addSubview(temp)
         contentView.addSubview(time)
     }
