@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -74,6 +74,7 @@
 		A8BF2CA72756705100BA81E7 /* IntrinsicSizeCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BF2CA62756705100BA81E7 /* IntrinsicSizeCollectionView.swift */; };
 		A8BF2CA92756708B00BA81E7 /* BaseCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BF2CA82756708B00BA81E7 /* BaseCollectionView.swift */; };
 		A8BF2CAB275672E900BA81E7 /* ForecastCollectionCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BF2CAA275672E900BA81E7 /* ForecastCollectionCellModel.swift */; };
+		A8BF2CAD27567A0E00BA81E7 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BF2CAC27567A0E00BA81E7 /* UIImageView+Extension.swift */; };
 		AB0B11E3D055AEE56F73C0F0 /* Pods_gaiali_interview_assignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E96BC9F88340182B7E2507D6 /* Pods_gaiali_interview_assignment.framework */; };
 /* End PBXBuildFile section */
 
@@ -159,6 +160,7 @@
 		A8BF2CA62756705100BA81E7 /* IntrinsicSizeCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntrinsicSizeCollectionView.swift; sourceTree = "<group>"; };
 		A8BF2CA82756708B00BA81E7 /* BaseCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionView.swift; sourceTree = "<group>"; };
 		A8BF2CAA275672E900BA81E7 /* ForecastCollectionCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastCollectionCellModel.swift; sourceTree = "<group>"; };
+		A8BF2CAC27567A0E00BA81E7 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		E5B00DEA8E0F9011C0882DF6 /* Pods-gaiali-interview-assignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gaiali-interview-assignment.debug.xcconfig"; path = "Target Support Files/Pods-gaiali-interview-assignment/Pods-gaiali-interview-assignment.debug.xcconfig"; sourceTree = "<group>"; };
 		E77DEF5BE4D1CF6CF6174D65 /* Pods-gaiali-interview-assignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gaiali-interview-assignment.release.xcconfig"; path = "Target Support Files/Pods-gaiali-interview-assignment/Pods-gaiali-interview-assignment.release.xcconfig"; sourceTree = "<group>"; };
 		E96BC9F88340182B7E2507D6 /* Pods_gaiali_interview_assignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gaiali_interview_assignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -278,6 +280,7 @@
 				A89FE9AA27510C7600DE9D1F /* UIView+Extension.swift */,
 				A89FE9EB2751194300DE9D1F /* KeyedDecodingContainer+Extension.swift */,
 				A89FEA15275136B400DE9D1F /* JSONDecoder+Extension.swift */,
+				A8BF2CAC27567A0E00BA81E7 /* UIImageView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -498,6 +501,7 @@
 				A89FE9812751062C00DE9D1F /* Sources */,
 				A89FE9822751062C00DE9D1F /* Frameworks */,
 				A89FE9832751062C00DE9D1F /* Resources */,
+				9EAAEEE7CE5FA72C15CAEE1B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -611,6 +615,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		9EAAEEE7CE5FA72C15CAEE1B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-gaiali-interview-assignment/Pods-gaiali-interview-assignment-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-gaiali-interview-assignment/Pods-gaiali-interview-assignment-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-gaiali-interview-assignment/Pods-gaiali-interview-assignment-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -672,6 +693,7 @@
 				A89FEA0427512C4C00DE9D1F /* Clouds.swift in Sources */,
 				A89FE9D12751116400DE9D1F /* Request.swift in Sources */,
 				A89FE9AB27510C7600DE9D1F /* UIView+Extension.swift in Sources */,
+				A8BF2CAD27567A0E00BA81E7 /* UIImageView+Extension.swift in Sources */,
 				A866B899275420DA00043C9E /* ForecastTableCell.swift in Sources */,
 				A89FE9A2275108B200DE9D1F /* AppTheme.swift in Sources */,
 			);

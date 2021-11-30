@@ -23,15 +23,17 @@ class ForecastCollectionCell: BaseCollectionCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(with viewModel: ForecastCollectionCellModel) {
-        time.text = viewModel.time
-        temp.text = viewModel.temperature
-        iconView.image = viewModel.iconPlaceholder
+    func configure(with model: ForecastCollectionCellModel) {
+        time.text = model.time
+        temp.text = model.temperature
+        iconView.setImage(with: model.iconUrl, placeholder: model.iconPlaceholder)
     }
     
     func setViews() {
         iconView.contentMode = .scaleAspectFit
         contentView.addSubview(iconView)
+        
+        temp.font = appTheme.primaryFont.withSize(32)
         contentView.addSubview(temp)
         contentView.addSubview(time)
     }
@@ -42,11 +44,11 @@ class ForecastCollectionCell: BaseCollectionCell {
          iconView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -padding),
          iconView.trailingAnchor.constraint(lessThanOrEqualTo: time.leadingAnchor, constant: -padding),
          iconView.trailingAnchor.constraint(lessThanOrEqualTo: temp.leadingAnchor, constant: -padding),
-         time.topAnchor.constraint(equalTo: contentView.topAnchor, constant: padding),
-         time.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding),
-         time.bottomAnchor.constraint(equalTo: temp.topAnchor, constant: -padding),
+         temp.topAnchor.constraint(equalTo: contentView.topAnchor, constant: padding),
          temp.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding),
-         temp.bottomAnchor.constraint(lessThanOrEqualTo: contentView.bottomAnchor, constant: -padding)]
+         temp.bottomAnchor.constraint(equalTo: time.topAnchor, constant: -padding),
+         time.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding),
+         time.bottomAnchor.constraint(lessThanOrEqualTo: contentView.bottomAnchor, constant: -padding)]
             .forEach { $0.isActive = true }
         iconView.setApectRatioConstraint(1)
     }

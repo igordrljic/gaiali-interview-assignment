@@ -40,7 +40,7 @@ class ForecastHourListViewModel {
             ForecastCollectionCellModel(temperature: "\(Int(hourForecast.main.temp.rounded()))\(units.tempUnit)",
                                         time: dateFormatter.string(from: hourForecast.dt),
                                         iconPlaceholder: UIImage(systemName: "photo")!,
-                                        icon: hourForecast.weather.first?.iconUrl)
+                                        iconUrl: hourForecast.weather.first!.iconUrl)
         })
     }
 }

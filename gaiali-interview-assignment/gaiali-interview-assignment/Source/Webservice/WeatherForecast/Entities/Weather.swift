@@ -18,16 +18,10 @@ struct Weather: Decodable {
 
 import UIKit
 
-extension UIScreen {
-    var scaleIdentifier: String {
-        "@\(scale)X"
-    }
-}
-
 extension Weather {
-    var iconUrl: URL? {
+    var iconUrl: URL {
         let imageRepoUrl = AppConfig.shared.imageRepositoryURL
-        let imageCode = "\(icon)\(UIScreen.main.scaleIdentifier).png"
+        let imageCode = "\(icon)@2x.png"
         return imageRepoUrl.appendingPathComponent(imageCode)
     }
 }

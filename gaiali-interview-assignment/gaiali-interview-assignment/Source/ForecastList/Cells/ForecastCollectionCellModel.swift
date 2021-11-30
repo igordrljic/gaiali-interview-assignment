@@ -12,5 +12,5 @@ struct ForecastCollectionCellModel {
     let temperature: String
     let time: String
     let iconPlaceholder: UIImage
-    let icon: URL?
+    let iconUrl: URL
 }
