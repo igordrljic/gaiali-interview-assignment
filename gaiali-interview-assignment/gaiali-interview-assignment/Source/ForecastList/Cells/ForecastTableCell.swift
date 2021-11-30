@@ -10,7 +10,7 @@ import UIKit
 class ForecastTableCell: BaseTableCell {
     private (set) var collection: IntrinsicSizeCollectionView!
     private let collectionLayout = UICollectionViewFlowLayout()
-    private let height: CGFloat = 160
+    private let height: CGFloat = UIScreen.main.bounds.width / 2
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
