@@ -1,5 +1,5 @@
 //
-//  ForecastLocalProvider.swift
+//  ForecastDictionaryProvider.swift
 //  gaiali-interview-assignment
 //
 //  Created by Igor Drljic on 29.11.21..
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ForecastLocalProvider: ForecastProvider {
+class ForecastDictionaryProvider: ForecastProvider {
     private let forecast: [String: [Forecast]]
     
     init(forecast: [String: [Forecast]]) {
@@ -17,7 +17,7 @@ class ForecastLocalProvider: ForecastProvider {
     func getForecast(for city: String,
                      units: Units,
                      completion: @escaping (Result<[Forecast], Error>) -> Void) {
-        if let forecast = forecast[ForecastLocalProvider.keyFor(city: city, units: units)] {
+        if let forecast = forecast[ForecastDictionaryProvider.keyFor(city: city, units: units)] {
             completion(.success(forecast))
         } else {
             completion(.success([]))

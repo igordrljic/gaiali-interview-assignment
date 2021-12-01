@@ -11,8 +11,19 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum Strings {
 
+  internal enum FileError {
+    /// File with name: %@ is not found.
+    internal static func fileNotFoundFor(_ p1: Any) -> String {
+      return Strings.tr("Localizable", "fileError.fileNotFoundFor", String(describing: p1))
+    }
+    /// Can't read file named: %@
+    internal static func readingFileFailed(_ p1: Any) -> String {
+      return Strings.tr("Localizable", "fileError.readingFileFailed", String(describing: p1))
+    }
+  }
+
   internal enum ForecastList {
-    /// Forecast
+    /// Weather Forecast
     internal static let title = Strings.tr("Localizable", "forecastList.title")
     internal enum City {
       /// Type city name

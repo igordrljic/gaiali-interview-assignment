@@ -62,11 +62,9 @@
 		A89FEA142751369100DE9D1F /* ForecastJSONMockProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89FEA132751369100DE9D1F /* ForecastJSONMockProvider.swift */; };
 		A89FEA16275136B400DE9D1F /* JSONDecoder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89FEA15275136B400DE9D1F /* JSONDecoder+Extension.swift */; };
 		A89FEA182751374700DE9D1F /* FileError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89FEA172751374700DE9D1F /* FileError.swift */; };
-		A89FEA1B2751380700DE9D1F /* PresentableErrorConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89FEA1A2751380700DE9D1F /* PresentableErrorConvertible.swift */; };
 		A89FEA1D2751381B00DE9D1F /* PresentableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89FEA1C2751381B00DE9D1F /* PresentableError.swift */; };
 		A89FEA1F27513A0300DE9D1F /* XCTestCase+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89FEA1E27513A0300DE9D1F /* XCTestCase+Extension.swift */; };
-		A8BF2C992755779B00BA81E7 /* ForecastHourListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BF2C982755779B00BA81E7 /* ForecastHourListViewController.swift */; };
-		A8BF2C9B2755785900BA81E7 /* ForecastLocalProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BF2C9A2755785900BA81E7 /* ForecastLocalProvider.swift */; };
+		A8BF2C9B2755785900BA81E7 /* ForecastDictionaryProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BF2C9A2755785900BA81E7 /* ForecastDictionaryProvider.swift */; };
 		A8BF2C9D27557ADE00BA81E7 /* BaseCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BF2C9C27557ADE00BA81E7 /* BaseCollectionCell.swift */; };
 		A8BF2CA0275651B000BA81E7 /* ForecastCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BF2C9F275651B000BA81E7 /* ForecastCollectionCell.swift */; };
 		A8BF2CA2275651E700BA81E7 /* ForecastHourListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BF2CA1275651E700BA81E7 /* ForecastHourListViewModel.swift */; };
@@ -149,11 +147,9 @@
 		A89FEA132751369100DE9D1F /* ForecastJSONMockProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastJSONMockProvider.swift; sourceTree = "<group>"; };
 		A89FEA15275136B400DE9D1F /* JSONDecoder+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Extension.swift"; sourceTree = "<group>"; };
 		A89FEA172751374700DE9D1F /* FileError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileError.swift; sourceTree = "<group>"; };
-		A89FEA1A2751380700DE9D1F /* PresentableErrorConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentableErrorConvertible.swift; sourceTree = "<group>"; };
 		A89FEA1C2751381B00DE9D1F /* PresentableError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentableError.swift; sourceTree = "<group>"; };
 		A89FEA1E27513A0300DE9D1F /* XCTestCase+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Extension.swift"; sourceTree = "<group>"; };
-		A8BF2C982755779B00BA81E7 /* ForecastHourListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastHourListViewController.swift; sourceTree = "<group>"; };
-		A8BF2C9A2755785900BA81E7 /* ForecastLocalProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastLocalProvider.swift; sourceTree = "<group>"; };
+		A8BF2C9A2755785900BA81E7 /* ForecastDictionaryProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDictionaryProvider.swift; sourceTree = "<group>"; };
 		A8BF2C9C27557ADE00BA81E7 /* BaseCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionCell.swift; sourceTree = "<group>"; };
 		A8BF2C9F275651B000BA81E7 /* ForecastCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastCollectionCell.swift; sourceTree = "<group>"; };
 		A8BF2CA1275651E700BA81E7 /* ForecastHourListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastHourListViewModel.swift; sourceTree = "<group>"; };
@@ -430,7 +426,7 @@
 				A89FEA0A27512D1600DE9D1F /* ForecastProvider.swift */,
 				A89FEA112751367B00DE9D1F /* ForecastWebProvider.swift */,
 				A89FEA132751369100DE9D1F /* ForecastJSONMockProvider.swift */,
-				A8BF2C9A2755785900BA81E7 /* ForecastLocalProvider.swift */,
+				A8BF2C9A2755785900BA81E7 /* ForecastDictionaryProvider.swift */,
 			);
 			path = ForecastProvider;
 			sourceTree = "<group>";
@@ -448,7 +444,6 @@
 			children = (
 				A89FEA1C2751381B00DE9D1F /* PresentableError.swift */,
 				A89FEA172751374700DE9D1F /* FileError.swift */,
-				A89FEA1A2751380700DE9D1F /* PresentableErrorConvertible.swift */,
 			);
 			path = Errors;
 			sourceTree = "<group>";
@@ -457,7 +452,6 @@
 			isa = PBXGroup;
 			children = (
 				A8BF2CA1275651E700BA81E7 /* ForecastHourListViewModel.swift */,
-				A8BF2C982755779B00BA81E7 /* ForecastHourListViewController.swift */,
 				A8BF2CA32756520400BA81E7 /* ForecastHourCollectionDataSource.swift */,
 			);
 			path = ForecastHourList;
@@ -668,7 +662,7 @@
 				A89FE9CF2751116400DE9D1F /* Network.swift in Sources */,
 				A89FE9A427510BF400DE9D1F /* AppThemeManager.swift in Sources */,
 				A8BF2CA92756708B00BA81E7 /* BaseCollectionView.swift in Sources */,
-				A8BF2C9B2755785900BA81E7 /* ForecastLocalProvider.swift in Sources */,
+				A8BF2C9B2755785900BA81E7 /* ForecastDictionaryProvider.swift in Sources */,
 				A89FE9DB275111FA00DE9D1F /* Webservice.swift in Sources */,
 				A8BF2CA72756705100BA81E7 /* IntrinsicSizeCollectionView.swift in Sources */,
 				A89FE9D32751116400DE9D1F /* JsonDecoding.swift in Sources */,
@@ -677,7 +671,6 @@
 				A866B897275420A300043C9E /* ForecastDaysListViewController.swift in Sources */,
 				A89FE9BD2751102900DE9D1F /* Assets+Generated.swift in Sources */,
 				A89FEA0027512C2A00DE9D1F /* Forecast.swift in Sources */,
-				A8BF2C992755779B00BA81E7 /* ForecastHourListViewController.swift in Sources */,
 				A89FEA0227512C3B00DE9D1F /* Wind.swift in Sources */,
 				A89FE9A827510C1600DE9D1F /* AppThemeDark.swift in Sources */,
 				A89FEA182751374700DE9D1F /* FileError.swift in Sources */,
@@ -686,7 +679,6 @@
 				A866B891275411DC00043C9E /* BaseTableCell.swift in Sources */,
 				A89FE9892751062C00DE9D1F /* AppDelegate.swift in Sources */,
 				A8BF2CA2275651E700BA81E7 /* ForecastHourListViewModel.swift in Sources */,
-				A89FEA1B2751380700DE9D1F /* PresentableErrorConvertible.swift in Sources */,
 				A89FE9D22751116400DE9D1F /* NetworkError.swift in Sources */,
 				A89FEA0827512C7100DE9D1F /* ForecastMain.swift in Sources */,
 				A866B89D2754210700043C9E /* Units.swift in Sources */,

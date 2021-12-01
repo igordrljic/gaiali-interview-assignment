@@ -19,3 +19,7 @@
 "presentableError.title" = "Error";
 "presentableError.general" = "Something went south. Please try again.";
 "presentableError.serverCommunicationError" = "Server communication error. Please try again.";
+
+// file errors
+"fileError.fileNotFoundFor" = "File with name: %@ is not found.";
+"fileError.readingFileFailed" = "Can't read file named: %@";

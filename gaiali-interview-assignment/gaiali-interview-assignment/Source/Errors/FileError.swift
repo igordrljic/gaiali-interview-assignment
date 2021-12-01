@@ -9,17 +9,14 @@ import Foundation
 
 enum FileError: LocalizedError {
     case fileNotFoundFor(fileName: String)
+    case readingFileFailed(fileName: String)
     
     var errorDescription: String? {
         switch self {
         case let .fileNotFoundFor(fileName):
-            return "File with name: \(fileName) is not found."
+            return Strings.FileError.fileNotFoundFor(fileName)
+        case let .readingFileFailed(fileName):
+            return Strings.FileError.readingFileFailed(fileName)
         }
-    }
-}
-
-extension FileError: PresentableErrorConvertible {
-    func convertToPresentable() -> PresentableError {
-        .general
     }
 }

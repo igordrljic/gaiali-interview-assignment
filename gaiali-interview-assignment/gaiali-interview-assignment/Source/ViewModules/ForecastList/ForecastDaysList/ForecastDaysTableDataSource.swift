@@ -8,8 +8,8 @@
 import UIKit
 
 class ForecastDaysTableDataSource: NSObject, UITableViewDataSource {
-    var sectionTitles = [String]()
-    var cellViewModels = [ForecastHourListViewModel]()
+    var sectionTitles: [String] = []
+    var cellViewModels: [ForecastHourListViewModel] = []
     
     func numberOfSections(in tableView: UITableView) -> Int {
         cellViewModels.count

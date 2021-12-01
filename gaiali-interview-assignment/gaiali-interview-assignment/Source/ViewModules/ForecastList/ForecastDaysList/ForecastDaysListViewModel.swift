@@ -25,7 +25,7 @@ class ForecastDaysListViewModel {
                 completion(.success(()))
             case let .failure(error):
                 self.clear()
-                completion(.failure(error.toPresentableError()))
+                completion(.failure(error))
             }
         }
     }
@@ -51,8 +51,8 @@ class ForecastDaysListViewModel {
     
     private func fillCellViewModels(with forecasts: [[Forecast]], for city: String) {
         forecastTableDataSource.cellViewModels = forecasts.map({ forecastsForDay in
-            let forecast = [ForecastLocalProvider.keyFor(city: city, units: units): forecastsForDay]
-            let forecastProvider = ForecastLocalProvider(forecast: forecast)
+            let forecast = [ForecastDictionaryProvider.keyFor(city: city, units: units): forecastsForDay]
+            let forecastProvider = ForecastDictionaryProvider(forecast: forecast)
             return ForecastHourListViewModel(forecastProvider: forecastProvider, city: city, units: units)
         })
     }
