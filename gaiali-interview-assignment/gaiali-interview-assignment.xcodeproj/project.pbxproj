@@ -63,7 +63,6 @@
 		A89FEA142751369100DE9D1F /* ForecastJSONMockProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89FEA132751369100DE9D1F /* ForecastJSONMockProvider.swift */; };
 		A89FEA16275136B400DE9D1F /* JSONDecoder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89FEA15275136B400DE9D1F /* JSONDecoder+Extension.swift */; };
 		A89FEA182751374700DE9D1F /* FileError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89FEA172751374700DE9D1F /* FileError.swift */; };
-		A89FEA1D2751381B00DE9D1F /* PresentableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89FEA1C2751381B00DE9D1F /* PresentableError.swift */; };
 		A89FEA1F27513A0300DE9D1F /* XCTestCase+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89FEA1E27513A0300DE9D1F /* XCTestCase+Extension.swift */; };
 		A8BF2C9B2755785900BA81E7 /* ForecastDictionaryProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BF2C9A2755785900BA81E7 /* ForecastDictionaryProvider.swift */; };
 		A8BF2C9D27557ADE00BA81E7 /* BaseCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BF2C9C27557ADE00BA81E7 /* BaseCollectionCell.swift */; };
@@ -149,7 +148,6 @@
 		A89FEA132751369100DE9D1F /* ForecastJSONMockProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastJSONMockProvider.swift; sourceTree = "<group>"; };
 		A89FEA15275136B400DE9D1F /* JSONDecoder+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Extension.swift"; sourceTree = "<group>"; };
 		A89FEA172751374700DE9D1F /* FileError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileError.swift; sourceTree = "<group>"; };
-		A89FEA1C2751381B00DE9D1F /* PresentableError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentableError.swift; sourceTree = "<group>"; };
 		A89FEA1E27513A0300DE9D1F /* XCTestCase+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Extension.swift"; sourceTree = "<group>"; };
 		A8BF2C9A2755785900BA81E7 /* ForecastDictionaryProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDictionaryProvider.swift; sourceTree = "<group>"; };
 		A8BF2C9C27557ADE00BA81E7 /* BaseCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionCell.swift; sourceTree = "<group>"; };
@@ -445,7 +443,6 @@
 		A89FEA19275137FE00DE9D1F /* Errors */ = {
 			isa = PBXGroup;
 			children = (
-				A89FEA1C2751381B00DE9D1F /* PresentableError.swift */,
 				A89FEA172751374700DE9D1F /* FileError.swift */,
 			);
 			path = Errors;
@@ -656,7 +653,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A866B88F2753F53300043C9E /* ForecastListNavigator.swift in Sources */,
-				A89FEA1D2751381B00DE9D1F /* PresentableError.swift in Sources */,
 				A89FE9BC2751102900DE9D1F /* Strings+Generated.swift in Sources */,
 				A89FE9EA275113D600DE9D1F /* WeatherWebservice.swift in Sources */,
 				A89FE9E42751131B00DE9D1F /* AppConfig.swift in Sources */,
