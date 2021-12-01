@@ -24,9 +24,7 @@ class ForecastTableCell: BaseTableCell {
     
     func configure(with viewModel: ForecastHourListViewModel) {
         collection.dataSource = viewModel.forecastCollectionDataSource
-        viewModel.load { _ in
-            self.collection.reloadData()
-        }
+        collection.reloadData()
     }
     
     override func layoutSubviews() {

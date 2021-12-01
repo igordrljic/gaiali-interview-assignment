@@ -60,9 +60,7 @@ class ForecastDaysListViewModel {
     
     private func fillCellViewModels(with forecasts: [[Forecast]], for city: String) {
         forecastTableDataSource.cellViewModels = forecasts.map({ forecastsForDay in
-            let forecast = [ForecastDictionaryProvider.keyFor(city: city, units: units): forecastsForDay]
-            let forecastProvider = ForecastDictionaryProvider(forecast: forecast)
-            return ForecastHourListViewModel(forecastProvider: forecastProvider, city: city, units: units)
+            ForecastHourListViewModel(forecasts: forecastsForDay, units: units)
         })
     }
     

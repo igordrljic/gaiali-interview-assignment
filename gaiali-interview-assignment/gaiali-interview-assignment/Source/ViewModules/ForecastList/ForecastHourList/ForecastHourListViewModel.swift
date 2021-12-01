@@ -10,30 +10,8 @@ import UIKit
 
 class ForecastHourListViewModel {
     let forecastCollectionDataSource = ForecastHourCollectionDataSource()
-    private let forecastProvider: ForecastProvider
-    private let city: String
-    private let units: Units
     
-    init(forecastProvider: ForecastProvider, city: String, units: Units) {
-        self.forecastProvider = forecastProvider
-        self.city = city
-        self.units = units
-    }
-    
-    func load(completion: @escaping (Result<Void, Error>) -> Void) {
-        forecastProvider.getForecast(for: city, units: units) { response in
-            switch response {
-            case let .success(forecast):
-                self.fillCellViewModels(with: forecast)
-                completion(.success(()))
-            case let .failure(error):
-                self.fillCellViewModels(with: [])
-                completion(.failure(error))
-            }
-        }
-    }
-    
-    private func fillCellViewModels(with forecasts: [Forecast]) {
+    init(forecasts: [Forecast], units: Units) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm"
         forecastCollectionDataSource.cellViewModels = forecasts.map({ hourForecast in
