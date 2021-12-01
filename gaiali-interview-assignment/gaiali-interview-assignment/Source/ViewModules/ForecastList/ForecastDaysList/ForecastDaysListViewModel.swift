@@ -9,7 +9,7 @@ import UIKit
 
 class ForecastDaysListViewModel {
     let forecastTableDataSource = ForecastDaysTableDataSource()
-    private let forecastProvider: ForecastProvider
+    private var forecastProvider: ForecastProvider
     private let units: Units
     
     init(forecastProvider: ForecastProvider, units: Units) {
@@ -33,6 +33,15 @@ class ForecastDaysListViewModel {
     func clear() {
         forecastTableDataSource.sectionTitles = []
         forecastTableDataSource.cellViewModels = []
+    }
+    
+    func setForecastProvider(for segment: ForecastDaysListViewController.Segment) {
+        switch segment {
+        case .web:
+            self.forecastProvider = ForecastWebProvider()
+        case .json:
+            self.forecastProvider = ForecastJSONMockProvider()
+        }
     }
     
     private func update(with forecast: [Forecast], for city: String) {

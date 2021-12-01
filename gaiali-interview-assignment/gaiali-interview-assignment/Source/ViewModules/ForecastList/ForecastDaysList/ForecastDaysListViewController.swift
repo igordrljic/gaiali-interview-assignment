@@ -8,7 +8,7 @@
 import UIKit
 
 extension ForecastDaysListViewController {
-    enum Segment {
+    enum Segment: Int {
         case web
         case json
         
@@ -44,6 +44,9 @@ class ForecastDaysListViewController: BaseViewController {
     override func setViews() {
         super.setViews()
         
+        viewModel.setForecastProvider(for: .web)
+        segmentedControl.selectedSegmentIndex = Segment.web.rawValue
+        segmentedControl.addTarget(self, action: #selector(segmentedControlValueChanged(_:)), for: .valueChanged)
         view.addSubview(segmentedControl)
         
         textField.backgroundColor = appTheme.primaryColor
@@ -76,13 +79,18 @@ class ForecastDaysListViewController: BaseViewController {
          tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)]
             .forEach { $0.isActive = true }
     }
-}
-
-extension ForecastDaysListViewController: UITextFieldDelegate {
-    func textFieldDidEndEditing(_ textField: UITextField) {
+    
+    @objc
+    private func segmentedControlValueChanged(_ segmentedControl: UISegmentedControl) {
+        let selectedSegment = Segment(rawValue: segmentedControl.selectedSegmentIndex)!
+        viewModel.setForecastProvider(for: selectedSegment)
+        loadForecast()
+    }
+    
+    private func loadForecast() {
         if let city = textField.text?.trimmingCharacters(in: .whitespacesAndNewlines), !city.isEmpty {
             self.showActivityIndicator()
-            self.viewModel.load(for: city) { result in
+            viewModel.load(for: city) { result in
                 self.hideActivityIndicator()
                 if case let .failure(error) = result {
                     self.presentAlert(for: error)
@@ -93,6 +101,12 @@ extension ForecastDaysListViewController: UITextFieldDelegate {
             self.viewModel.clear()
             self.tableView.reloadData()
         }
+    }
+}
+
+extension ForecastDaysListViewController: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        loadForecast()
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
