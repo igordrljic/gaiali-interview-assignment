@@ -28,7 +28,7 @@ class ForecastDaysListViewController: BaseViewController {
         textField.backgroundColor = appTheme.primaryColor
         textField.tintColor = appTheme.primaryInvertColor
         textField.attributedPlaceholder = NSAttributedString(string: Strings.ForecastList.City.placeholder,
-                                                             attributes: [.foregroundColor: appTheme.primaryInvertColor])
+                                                             attributes: [.foregroundColor: appTheme.primaryInvertColor.withAlphaComponent(0.4)])
         textField.textColor = appTheme.primaryInvertColor
         textField.borderStyle = .roundedRect
         textField.returnKeyType = .done
@@ -56,7 +56,7 @@ class ForecastDaysListViewController: BaseViewController {
 
 extension ForecastDaysListViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if let city = textField.text, !city.isEmpty {
+        if let city = textField.text?.trimmingCharacters(in: .whitespacesAndNewlines), !city.isEmpty {
             self.showActivityIndicator()
             self.viewModel.load(for: city) { result in
                 self.hideActivityIndicator()
