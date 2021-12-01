@@ -7,10 +7,28 @@
 
 import UIKit
 
+extension ForecastDaysListViewController {
+    enum Segment {
+        case web
+        case json
+        
+        var title: String {
+            switch self {
+            case .web:
+                return Strings.ForecastList.Segment.web
+            case .json:
+                return Strings.ForecastList.Segment.json
+            }
+        }
+    }
+}
+
 class ForecastDaysListViewController: BaseViewController {
     var viewModel: ForecastDaysListViewModel!
     let textField = UITextField().autolayoutView
     let tableView = UITableView().autolayoutView
+    let segmentedControl = UISegmentedControl(items: [Segment.web.title, Segment.json.title]).autolayoutView
+    private let padding: CGFloat = 10
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +43,9 @@ class ForecastDaysListViewController: BaseViewController {
     
     override func setViews() {
         super.setViews()
+        
+        view.addSubview(segmentedControl)
+        
         textField.backgroundColor = appTheme.primaryColor
         textField.tintColor = appTheme.primaryInvertColor
         textField.attributedPlaceholder = NSAttributedString(string: Strings.ForecastList.City.placeholder,
@@ -42,8 +63,11 @@ class ForecastDaysListViewController: BaseViewController {
     
     override func setConstraints() {
         super.setConstraints()
-        [textField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-         textField.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+        [segmentedControl.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: padding),
+         segmentedControl.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: padding),
+         segmentedControl.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -padding),
+         textField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+         textField.topAnchor.constraint(equalTo: segmentedControl.bottomAnchor, constant: padding),
          textField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
          textField.bottomAnchor.constraint(equalTo: tableView.topAnchor),
          textField.heightAnchor.constraint(equalToConstant: 50),

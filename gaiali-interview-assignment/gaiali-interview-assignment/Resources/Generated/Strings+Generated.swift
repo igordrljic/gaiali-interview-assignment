@@ -29,6 +29,12 @@ internal enum Strings {
       /// Type city name
       internal static let placeholder = Strings.tr("Localizable", "forecastList.city.placeholder")
     }
+    internal enum Segment {
+      /// JSON File
+      internal static let json = Strings.tr("Localizable", "forecastList.segment.json")
+      /// Web API
+      internal static let web = Strings.tr("Localizable", "forecastList.segment.web")
+    }
   }
 
   internal enum General {

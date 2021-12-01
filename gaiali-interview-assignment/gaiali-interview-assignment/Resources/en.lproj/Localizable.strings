@@ -14,6 +14,8 @@
 // forecast list
 "forecastList.title" = "Weather Forecast";
 "forecastList.city.placeholder" = "Type city name";
+"forecastList.segment.web" = "Web API";
+"forecastList.segment.json" = "JSON File";
 
 // presentable errors
 "presentableError.title" = "Error";
