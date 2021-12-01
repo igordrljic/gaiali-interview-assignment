@@ -191,13 +191,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A841CFFB2757B6FD007F7860 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				A866B89C2754210700043C9E /* Units.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		A866B88D2753F51300043C9E /* ForecastList */ = {
 			isa = PBXGroup;
 			children = (
+				A841CFFB2757B6FD007F7860 /* Entities */,
 				A8BF2CA52756539000BA81E7 /* ForecastDaysList */,
 				A8BF2C972755772C00BA81E7 /* ForecastHourList */,
 				A8BF2C9E275651A900BA81E7 /* Cells */,
-				A866B89C2754210700043C9E /* Units.swift */,
 			);
 			path = ForecastList;
 			sourceTree = "<group>";

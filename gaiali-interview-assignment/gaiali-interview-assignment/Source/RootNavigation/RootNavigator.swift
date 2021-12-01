@@ -10,17 +10,17 @@ import UIKit
 class RootNavigator {
     static let shared = RootNavigator()
     var window: UIWindow!
+        
+    let forecastListNavigator = ForecastListNavigator()
+    
     private var appTheme: AppTheme {
         AppThemeManager.shared.theme
     }
     
-    let forecastListNavigator = ForecastListNavigator()
-        
     private init() {}
     
     func start(with window: UIWindow) {
         self.window = window
-        window.overrideUserInterfaceStyle = AppThemeManager.systemUserInterfaceStyle
         let viewController = forecastListNavigator.forecastListViewController
         viewController.navigationItem.title = Strings.ForecastList.title
         let navigationController = UINavigationController(rootViewController: viewController)
