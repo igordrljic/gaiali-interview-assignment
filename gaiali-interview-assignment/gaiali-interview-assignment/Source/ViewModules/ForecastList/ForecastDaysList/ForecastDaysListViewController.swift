@@ -28,6 +28,7 @@ class ForecastDaysListViewController: BaseViewController {
     let textField = UITextField().autolayoutView
     let tableView = UITableView().autolayoutView
     let segmentedControl = UISegmentedControl(items: [Segment.web.title, Segment.json.title]).autolayoutView
+    private let refreshControl = UIRefreshControl()
     private let padding: CGFloat = 10
     
     override func viewDidLoad() {
@@ -43,6 +44,10 @@ class ForecastDaysListViewController: BaseViewController {
     
     override func setViews() {
         super.setViews()
+        
+        refreshControl.tintColor = appTheme.primaryColor
+        refreshControl.isHidden = true
+        refreshControl.addTarget(self, action: #selector(reloadAction), for: .valueChanged)
         
         viewModel.setForecastProvider(for: .web)
         segmentedControl.selectedSegmentIndex = Segment.web.rawValue
@@ -61,6 +66,7 @@ class ForecastDaysListViewController: BaseViewController {
         
         tableView.register(ForecastTableCell.self, forCellReuseIdentifier: ForecastTableCell.reuseIdentifier)
         tableView.dataSource = viewModel.forecastTableDataSource
+        tableView.refreshControl = refreshControl
         view.addSubview(tableView)
     }
     
@@ -87,17 +93,34 @@ class ForecastDaysListViewController: BaseViewController {
         loadForecast()
     }
     
-    private func loadForecast() {
+    @objc
+    private func reloadAction() {
+        loadForecast(isRefreshing: true)
+    }
+    
+    private func loadForecast(isRefreshing: Bool = false) {
         if let city = textField.text?.trimmingCharacters(in: .whitespacesAndNewlines), !city.isEmpty {
-            self.showActivityIndicator()
+            if isRefreshing {
+                refreshControl.isHidden = false
+            } else {
+                self.showActivityIndicator()
+            }
             viewModel.load(for: city) { result in
-                self.hideActivityIndicator()
+                if isRefreshing {
+                    self.refreshControl.endRefreshing()
+                    self.refreshControl.isHidden = true
+                } else {
+                    self.hideActivityIndicator()
+                }
                 if case let .failure(error) = result {
                     self.presentAlert(for: error)
                 }
                 self.tableView.reloadData()
             }
         } else {
+            if isRefreshing {
+                self.refreshControl.endRefreshing()
+            }
             self.viewModel.clear()
             self.tableView.reloadData()
         }
