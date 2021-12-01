@@ -24,7 +24,7 @@ class ForecastJSONMockProvider: ForecastProvider {
     private func readJSON(file fileName: String) -> Result<[Forecast], Error> {
         do {
             guard let fileUrl = Bundle(for: ForecastJSONMockProvider.self).url(forResource: fileName, withExtension: "json")
-            else { throw FileError.fileNotFoundFor(fileName: fileName) }
+            else { throw FileError.fileNotFoundFor(fileName: "\(fileName).json") }
             let data = try Data(contentsOf: fileUrl)
             let forecast = try jsonDecoder.decode(ForecastResponse.self, from: data)
             return .success(forecast.list)
