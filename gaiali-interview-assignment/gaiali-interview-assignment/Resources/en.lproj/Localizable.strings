@@ -25,3 +25,6 @@
 // file errors
 "fileError.fileNotFoundFor" = "File with name: %@ is not found.";
 "fileError.readingFileFailed" = "Can't read file named: %@";
+
+// weather webservice errors
+"weatherWebError.cityNotfound" = "Sorry, we can't show weather info for this city.";

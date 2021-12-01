@@ -49,9 +49,8 @@ class ForecastDaysListViewController: BaseViewController {
         refreshControl.isHidden = true
         refreshControl.addTarget(self, action: #selector(reloadAction), for: .valueChanged)
         
-        viewModel.setForecastProvider(for: .web)
-        segmentedControl.selectedSegmentIndex = Segment.web.rawValue
         segmentedControl.addTarget(self, action: #selector(segmentedControlValueChanged(_:)), for: .valueChanged)
+        set(segment: .web)
         view.addSubview(segmentedControl)
         
         textField.backgroundColor = appTheme.primaryColor
@@ -67,6 +66,7 @@ class ForecastDaysListViewController: BaseViewController {
         tableView.register(ForecastTableCell.self, forCellReuseIdentifier: ForecastTableCell.reuseIdentifier)
         tableView.dataSource = viewModel.forecastTableDataSource
         tableView.refreshControl = refreshControl
+        tableView.keyboardDismissMode = .interactive
         view.addSubview(tableView)
     }
     
@@ -87,19 +87,12 @@ class ForecastDaysListViewController: BaseViewController {
     }
     
     @objc
-    private func segmentedControlValueChanged(_ segmentedControl: UISegmentedControl) {
-        let selectedSegment = Segment(rawValue: segmentedControl.selectedSegmentIndex)!
-        viewModel.setForecastProvider(for: selectedSegment)
-        loadForecast()
-    }
-    
-    @objc
     private func reloadAction() {
         loadForecast(isRefreshing: true)
     }
     
     private func loadForecast(isRefreshing: Bool = false) {
-        if let city = textField.text?.trimmingCharacters(in: .whitespacesAndNewlines), !city.isEmpty {
+        if let city = readSearchText(from: textField) {
             if isRefreshing {
                 refreshControl.isHidden = false
             } else {
@@ -124,6 +117,24 @@ class ForecastDaysListViewController: BaseViewController {
             self.viewModel.clear()
             self.tableView.reloadData()
         }
+    }
+    
+    private func readSearchText(from textField: UITextField) -> String? {
+        guard let searchText = textField.text?.trimmingCharacters(in: .whitespacesAndNewlines), !searchText.isEmpty
+        else { return nil }
+        return searchText
+    }
+    
+    private func set(segment: Segment) {
+        viewModel.setForecastProvider(for: segment)
+        segmentedControl.selectedSegmentIndex = segment.rawValue
+    }
+    
+    @objc
+    private func segmentedControlValueChanged(_ segmentedControl: UISegmentedControl) {
+        let selectedSegment = Segment(rawValue: segmentedControl.selectedSegmentIndex)!
+        viewModel.setForecastProvider(for: selectedSegment)
+        loadForecast()
     }
 }
 

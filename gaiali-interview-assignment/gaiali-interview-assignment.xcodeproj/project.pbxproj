@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A841CFFA2757B19C007F7860 /* WeatherWebError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A841CFF92757B19C007F7860 /* WeatherWebError.swift */; };
 		A866B88F2753F53300043C9E /* ForecastListNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A866B88E2753F53300043C9E /* ForecastListNavigator.swift */; };
 		A866B891275411DC00043C9E /* BaseTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A866B890275411DC00043C9E /* BaseTableCell.swift */; };
 		A866B8932754206C00043C9E /* ForecastDaysListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A866B8922754206C00043C9E /* ForecastDaysListViewModel.swift */; };
@@ -88,6 +89,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A841CFF92757B19C007F7860 /* WeatherWebError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherWebError.swift; sourceTree = "<group>"; };
 		A866B88E2753F53300043C9E /* ForecastListNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastListNavigator.swift; sourceTree = "<group>"; };
 		A866B890275411DC00043C9E /* BaseTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableCell.swift; sourceTree = "<group>"; };
 		A866B8922754206C00043C9E /* ForecastDaysListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDaysListViewModel.swift; sourceTree = "<group>"; };
@@ -379,6 +381,7 @@
 			children = (
 				A89FE9FC2751262600DE9D1F /* Entities */,
 				A89FE9E9275113D600DE9D1F /* WeatherWebservice.swift */,
+				A841CFF92757B19C007F7860 /* WeatherWebError.swift */,
 			);
 			path = WeatherForecast;
 			sourceTree = "<group>";
@@ -700,6 +703,7 @@
 				A89FEA142751369100DE9D1F /* ForecastJSONMockProvider.swift in Sources */,
 				A8BF2CAB275672E900BA81E7 /* ForecastCollectionCellModel.swift in Sources */,
 				A89FE9D52751116400DE9D1F /* JSONEncoding.swift in Sources */,
+				A841CFFA2757B19C007F7860 /* WeatherWebError.swift in Sources */,
 				A89FE9D82751116400DE9D1F /* URLEncoding.swift in Sources */,
 				A89FEA0427512C4C00DE9D1F /* Clouds.swift in Sources */,
 				A89FE9D12751116400DE9D1F /* Request.swift in Sources */,

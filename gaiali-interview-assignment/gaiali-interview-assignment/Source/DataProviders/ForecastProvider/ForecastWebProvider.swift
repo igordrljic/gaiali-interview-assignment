@@ -26,7 +26,13 @@ class ForecastWebProvider: ForecastProvider {
             case let .success(response):
                 completion(.success(response.list))
             case let .failure(error):
-                completion(.failure(error))
+                if case let NetworkError.responseError(_, data) = error,
+                   let data = data,
+                   let weatherWebError: WeatherWebError = try? self.webservice.decoding.decode(data) {
+                    completion(.failure(weatherWebError))
+                } else {
+                    completion(.failure(error))
+                }
             }
         }
     }

@@ -50,6 +50,11 @@ internal enum Strings {
     /// Error
     internal static let title = Strings.tr("Localizable", "presentableError.title")
   }
+
+  internal enum WeatherWebError {
+    /// Sorry, we can't show weather info for this city.
+    internal static let cityNotfound = Strings.tr("Localizable", "weatherWebError.cityNotfound")
+  }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces
